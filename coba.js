@@ -11,7 +11,7 @@ console.log(satu)
 const dua = getUserSync(2)
 console.log(dua)
 
-const halo = "Hello world"
+const halo = "Helblo world"
 console.log(halo)
 
 // async
