@@ -8,7 +8,6 @@ app.set('view engine', 'ejs')
 app.use(expressEjsLayouts)
 
 app.get('/', (req, res) => {
-  // res.sendFile("./index.html", {root: __dirname})
 
   const mahasiswa = [
     {

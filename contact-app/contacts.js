@@ -67,7 +67,6 @@ const listContact = () => {
 
 const detailContact = (email) => {
   const contacts = loadContact()
-  
   const contact = contacts.find((contact) => contact.email.toLowerCase() === email.toLowerCase())
   if(contact) {
     console.log(`

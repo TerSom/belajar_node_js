@@ -8,18 +8,38 @@
                         <th scope="col">#</th>
                         <th scope="col">Nama</th>
                         <th scope="col">NO</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Terry</td>
-                        <td>01231312</td>
-                        <td>
-                            <a href="" class="btn btn-success bagde rounded-pill"> <i class="bi bi-info-circle-fill"></i> Aksi</a>
-                        </td>
-                    </tr>
+                    <% if (contacts.length === 0) { %>
+                        <div class="alert alert-danger" role="alert">
+                            Data Contact tidak ada <a href="/" class="card-link">Kembali ke halaman Home</a>
+                        </div>
+                        <% } else { %>
+                            <% contacts.forEach((contacts, i )=> { %>
+                                <tr>
+                                    <th scope="row">
+                                        <%= i + 1 %>
+                                    </th>
+                                    <td>
+                                        <%= contacts.nama %>
+                                    </td>
+                                    <td>
+                                        <%= contacts.noHp %>
+                                    </td>
+                                    <td>
+                                        <%= contacts.email %>
+                                    </td>
+                                    <td>
+                                        <a href="/contact/<%= contacts.email %>"
+                                            class="btn btn-success bagde rounded-pill"> <i
+                                                class="bi bi-info-circle-fill"></i> Aksi</a>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                                    <% } %>
                 </tbody>
             </table>
         </div>
